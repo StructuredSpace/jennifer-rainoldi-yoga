@@ -91,7 +91,7 @@ a {
 }
 
 .logo-wordmark {
-  height: 36px;
+  height: 44px;
   width: auto;
   display: block;
 }
@@ -511,7 +511,7 @@ section h2 {
   margin: 4px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav-toggle {
     display: flex;
   }

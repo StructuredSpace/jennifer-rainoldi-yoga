@@ -5,6 +5,7 @@ export const translations = {
       calendar: "Calendario",
       pricing: "Pacchetti",
       bookyway: "Prenota",
+      gift: "Regalo",
       contact: "Contatti",
     },
     hero: {
@@ -79,6 +80,7 @@ export const translations = {
       calendar: "Schedule",
       pricing: "Packages",
       bookyway: "Book",
+      gift: "Gift",
       contact: "Contact",
     },
     hero: {
