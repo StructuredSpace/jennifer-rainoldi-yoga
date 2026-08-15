@@ -14,6 +14,14 @@ function applyLanguage(lang) {
     }
   });
 
+  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+    const path = el.getAttribute("data-i18n-html");
+    const value = getNested(translations[lang], path);
+    if (value !== undefined) {
+      el.innerHTML = value;
+    }
+  });
+
   document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
     const path = el.getAttribute("data-i18n-alt");
     const value = getNested(translations[lang], path);

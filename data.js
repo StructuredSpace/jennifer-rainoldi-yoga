@@ -30,7 +30,7 @@ export const translations = {
       ],
       approccioBreath:
         "Respiro e Meditazione sono parte integrante di ogni pratica, un invito a lasciare andare, sentire e ritornare in contatto con il proprio sé.",
-      approccioClasses: "Offro lezioni di gruppo e private.",
+      approccioClasses: "<strong>Offro lezioni di gruppo e private.</strong>",
       approccioClosing:
         "Ogni lezione è un invito a rallentare, ascoltarsi e creare uno spazio di libertà interiore, un respiro alla volta.",
     },
@@ -106,7 +106,7 @@ export const translations = {
       ],
       approccioBreath:
         "Breath and Meditation are an integral part of every practice, an invitation to let go, to feel, and to reconnect with yourself.",
-      approccioClasses: "I offer both group and private classes.",
+      approccioClasses: "<strong>I offer both group and private classes.</strong>",
       approccioClosing:
         "Every class is an invitation to slow down, listen to yourself, and create a space of inner freedom, one breath at a time.",
     },
