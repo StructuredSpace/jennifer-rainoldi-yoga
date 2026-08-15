@@ -63,6 +63,33 @@ test("renderPricingCardHTML omits the unit suffix entirely when not present", ()
   };
   const html = renderPricingCardHTML(plan, "en");
   assert.doesNotMatch(html, /undefined/);
+  assert.doesNotMatch(html, /pricing-card-unit/);
+});
+
+test("renderPricingCardHTML renders the deadline text in the requested language when present", () => {
+  const plan = {
+    id: "sample",
+    name: { it: "X", en: "X" },
+    price: "1€",
+    deadline: { it: "Scade il 30 settembre", en: "Expires September 30" },
+    details: { it: [], en: [] },
+  };
+  const htmlEn = renderPricingCardHTML(plan, "en");
+  assert.match(htmlEn, /Expires September 30/);
+  assert.doesNotMatch(htmlEn, /Scade il 30 settembre/);
+  const htmlIt = renderPricingCardHTML(plan, "it");
+  assert.match(htmlIt, /Scade il 30 settembre/);
+});
+
+test("renderPricingCardHTML omits the deadline paragraph entirely when not present", () => {
+  const plan = {
+    id: "sample",
+    name: { it: "X", en: "X" },
+    price: "1€",
+    details: { it: [], en: [] },
+  };
+  const html = renderPricingCardHTML(plan, "en");
+  assert.doesNotMatch(html, /pricing-card-deadline/);
 });
 
 test("renderAllPricingHTML renders every group from the real pricing data", () => {
