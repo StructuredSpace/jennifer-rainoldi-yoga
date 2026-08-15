@@ -15,11 +15,19 @@ export function renderPricingCardHTML(plan, lang) {
   const deadline = plan.deadline
     ? `<p class="pricing-card-deadline">${plan.deadline[lang]}</p>`
     : "";
-  return `<div class="pricing-card${highlightClass}">
+  const expandableClass = plan.description ? " pricing-card--expandable" : "";
+  const interactiveAttrs = plan.description
+    ? ` role="button" tabindex="0" aria-expanded="false"`
+    : "";
+  const more = plan.description
+    ? `<p class="pricing-card-more" hidden>${plan.description[lang]}</p>`
+    : "";
+  return `<div class="pricing-card${highlightClass}${expandableClass}"${interactiveAttrs}>
     <h4 class="pricing-card-name">${name}</h4>
     <p class="pricing-card-price">${original}<span class="pricing-card-price-amount">${plan.price}</span>${unit}</p>
     <ul class="pricing-card-details">${details}</ul>
     ${deadline}
+    ${more}
   </div>`;
 }
 

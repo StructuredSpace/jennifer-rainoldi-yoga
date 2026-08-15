@@ -41,3 +41,14 @@ test("exactly one pricing plan is highlighted (the semester offer)", () => {
   assert.equal(highlighted.length, 1);
   assert.equal(highlighted[0].id, "semester");
 });
+
+test("every plan description (if present) is defined in both languages", () => {
+  for (const group of pricingGroups) {
+    for (const plan of group.plans) {
+      if (plan.description) {
+        assert.ok(plan.description.it, `plan ${plan.id} missing italian description`);
+        assert.ok(plan.description.en, `plan ${plan.id} missing english description`);
+      }
+    }
+  }
+});

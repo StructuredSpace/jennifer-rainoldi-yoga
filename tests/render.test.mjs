@@ -92,6 +92,36 @@ test("renderPricingCardHTML omits the deadline paragraph entirely when not prese
   assert.doesNotMatch(html, /pricing-card-deadline/);
 });
 
+test("renderPricingCardHTML renders the description as a hidden expandable block, with interactive attributes, when present", () => {
+  const plan = {
+    id: "sample",
+    name: { it: "X", en: "X" },
+    price: "1€",
+    description: { it: "Descrizione italiana", en: "English description" },
+    details: { it: [], en: [] },
+  };
+  const htmlEn = renderPricingCardHTML(plan, "en");
+  assert.match(htmlEn, /pricing-card--expandable/);
+  assert.match(htmlEn, /role="button"/);
+  assert.match(htmlEn, /tabindex="0"/);
+  assert.match(htmlEn, /aria-expanded="false"/);
+  assert.match(htmlEn, /<p class="pricing-card-more" hidden>English description<\/p>/);
+  assert.doesNotMatch(htmlEn, /Descrizione italiana/);
+});
+
+test("renderPricingCardHTML omits the description block and interactive attributes when not present", () => {
+  const plan = {
+    id: "sample",
+    name: { it: "X", en: "X" },
+    price: "1€",
+    details: { it: [], en: [] },
+  };
+  const html = renderPricingCardHTML(plan, "en");
+  assert.doesNotMatch(html, /pricing-card--expandable/);
+  assert.doesNotMatch(html, /pricing-card-more/);
+  assert.doesNotMatch(html, /role="button"/);
+});
+
 test("renderAllPricingHTML renders every group from the real pricing data", () => {
   const html = renderAllPricingHTML(pricingGroups, "it");
   for (const group of pricingGroups) {

@@ -2,16 +2,16 @@ export const translations = {
   it: {
     nav: {
       about: "Chi Sono",
-      pricing: "Prezzi",
-      schedule: "Calendario",
-      gallery: "Galleria",
+      calendar: "Calendario",
+      pricing: "Pacchetti",
+      bookyway: "Prenota",
       contact: "Contatti",
     },
     hero: {
       tagline:
         "Creo spazi di pratica per coltivare presenza, ascolto e consapevolezza, respiro dopo respiro. Un cammino verso la propria libertà.",
-      ctaBook: "Prenota una lezione",
-      ctaCalendar: "Vedi il calendario",
+      ctaStoria: "LA MIA STORIA in pillole",
+      ctaApproccio: "CONOSCI IL MIO APPROCCIO",
     },
     about: {
       heading: "La Mia Storia",
@@ -21,7 +21,7 @@ export const translations = {
         "Lo yoga è un cammino: non si tratta solo di partecipare a una lezione, ma di creare uno spazio di presenza, ascolto e trasformazione nella propria vita.",
     },
     pricing: {
-      heading: "Abbonamenti & Costi",
+      heading: "Pacchetti & Abbonamenti",
       intro: "Trova il percorso più adatto a te.",
       signupNote: "Per iscriverti, compila il modulo:",
       signupCta: "Iscriviti Ora",
@@ -34,21 +34,22 @@ export const translations = {
         "10% di sconto sui workshop per chi sceglie l'Abbonamento Semestrale",
       ],
     },
-    schedule: {
-      heading: "Calendario & Prenotazioni",
+    calendar: {
+      heading: "Calendario Lezioni",
+      imageAlt: "Orario settimanale delle lezioni di yoga",
+    },
+    bookyway: {
+      heading: "Prenota su Bookyway",
       body: "Consulta gli orari disponibili e prenota il tuo posto direttamente su Bookyway.",
       note: "Effettua il login (o registrati) su Bookyway per vedere gli orari disponibili e prenotare.",
-      ctaCalendar: "Vedi il Calendario",
-      ctaBook: "Prenota una Lezione",
-    },
-    gallery: {
-      heading: "Galleria",
+      cta: "Vai a Bookyway",
     },
     contact: {
       heading: "Contatti",
       body: "Hai domande? Scrivimi, sarò felice di risponderti.",
       whatsapp: "Scrivimi su WhatsApp",
       email: "Inviami una Email",
+      maps: "Vedi la Sede su Google Maps",
     },
     footer: {
       location: "Sondrio, Italia",
@@ -58,16 +59,16 @@ export const translations = {
   en: {
     nav: {
       about: "About",
-      pricing: "Pricing",
-      schedule: "Schedule",
-      gallery: "Gallery",
+      calendar: "Schedule",
+      pricing: "Packages",
+      bookyway: "Book",
       contact: "Contact",
     },
     hero: {
       tagline:
         "I create spaces for practice to cultivate presence, listening, and awareness, breath after breath. A path toward your own freedom.",
-      ctaBook: "Book a Class",
-      ctaCalendar: "View the Calendar",
+      ctaStoria: "MY STORY in a nutshell",
+      ctaApproccio: "DISCOVER MY APPROACH",
     },
     about: {
       heading: "My Story",
@@ -77,7 +78,7 @@ export const translations = {
         "Yoga is a path: it's not just about attending a class, but about creating a space of presence, listening, and transformation in your own life.",
     },
     pricing: {
-      heading: "Packages & Pricing",
+      heading: "Packages & Subscriptions",
       intro: "Find the path that fits you best.",
       signupNote: "To sign up, fill out the form:",
       signupCta: "Sign Up Now",
@@ -90,21 +91,22 @@ export const translations = {
         "10% off workshops for Semester Subscription members",
       ],
     },
-    schedule: {
-      heading: "Schedule & Booking",
+    calendar: {
+      heading: "Class Schedule",
+      imageAlt: "Weekly yoga class schedule",
+    },
+    bookyway: {
+      heading: "Book on Bookyway",
       body: "Check available times and book your spot directly on Bookyway.",
       note: "Log in (or sign up) on Bookyway to see available times and book.",
-      ctaCalendar: "View the Calendar",
-      ctaBook: "Book a Class",
-    },
-    gallery: {
-      heading: "Gallery",
+      cta: "Go to Bookyway",
     },
     contact: {
       heading: "Contact",
       body: "Have questions? Get in touch, I'd love to hear from you.",
       whatsapp: "Message on WhatsApp",
       email: "Send an Email",
+      maps: "View the Studio on Google Maps",
     },
     footer: {
       location: "Sondrio, Italy",
@@ -144,6 +146,10 @@ export const pricingGroups = [
           it: ["6 lezioni", "Validità 1 mese", "Riservato ai nuovi allievi"],
           en: ["6 classes", "Valid for 1 month", "New students only"],
         },
+        description: {
+          it: "Un primo passo per conoscere lo studio, l'insegnante e scoprire la pratica dello Yoga. Questo percorso ti permette di sperimentare diversi stili e trovare quello più adatto a te. Al termine del percorso potrai scegliere la soluzione più adatta alle tue esigenze.",
+          en: "A first step to get to know the studio, the teacher, and discover the practice of Yoga. This path lets you try different styles and find the one that suits you best. At the end of the path you can choose the solution that best fits your needs.",
+        },
       },
     ],
   },
@@ -162,6 +168,10 @@ export const pricingGroups = [
           ],
           en: ["Valid 6 months from the purchase date", "No fixed weekly commitment"],
         },
+        description: {
+          it: "La soluzione ideale se vuoi praticare senza una frequenza prestabilita. Nessun obbligo di venire ogni settimana: hai 6 mesi per utilizzare i tuoi ingressi, secondo i tuoi tempi.",
+          en: "The ideal solution if you want to practice without a fixed schedule. No obligation to come every week: you have 6 months to use your classes, at your own pace.",
+        },
       },
     ],
   },
@@ -177,6 +187,10 @@ export const pricingGroups = [
           it: ["8 ingressi", "1 volta a settimana"],
           en: ["8 entries", "1x per week"],
         },
+        description: {
+          it: "Inizia a creare una pratica costante.",
+          en: "Start building a consistent practice.",
+        },
       },
       {
         id: "flex",
@@ -186,6 +200,10 @@ export const pricingGroups = [
           it: ["12 ingressi", "2 volte a settimana"],
           en: ["12 entries", "2x per week"],
         },
+        description: {
+          it: "La scelta migliore per trasformare la pratica in un'abitudine.",
+          en: "The best choice for turning practice into a habit.",
+        },
       },
       {
         id: "strong",
@@ -194,6 +212,10 @@ export const pricingGroups = [
         details: {
           it: ["Ingressi illimitati", "In presenza oppure online"],
           en: ["Unlimited entries", "In-person or online"],
+        },
+        description: {
+          it: "Per chi desidera vivere lo yoga con continuità, senza vincoli sul numero di lezioni. Pratica liberamente, in presenza oppure online, seguendo i tuoi tempi e le tue esigenze.",
+          en: "For those who want to live yoga with continuity, with no limit on the number of classes. Practice freely, in person or online, at your own pace and to your own needs.",
         },
       },
       {
@@ -236,6 +258,10 @@ export const pricingGroups = [
             "Free tote bag",
             "Online class included",
           ],
+        },
+        description: {
+          it: "Se senti il desiderio di dedicarti allo yoga con continuità, questo è il momento giusto per iniziare un percorso di 6 mesi che ti accompagnerà in un viaggio più profondo verso equilibrio, consapevolezza e crescita personale. Un periodo abbastanza lungo per creare continuità, approfondire la pratica e trasformare lo yoga in un'abitudine.",
+          en: "If you feel ready to commit to yoga with continuity, this is the right moment to begin a 6-month path that will guide you on a deeper journey toward balance, awareness, and personal growth. A period long enough to build consistency, deepen your practice, and turn yoga into a habit.",
         },
         highlight: true,
       },
