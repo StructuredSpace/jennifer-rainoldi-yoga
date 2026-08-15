@@ -15,7 +15,7 @@ export const translations = {
     },
     about: {
       heading: "La Mia Storia",
-      bio: "Mi chiamo Jennifer e il mio percorso nello yoga inizia nel 2012 con l'Hatha Yoga, diventando nel tempo una pratica quotidiana. Nel 2021 approfondisco lo studio con una formazione biennale in Hatha e Vinyasa Yoga presso Hari Om. Nel 2023 viaggio alla volta di Rishikesh, dove mi formo in Vinyasa e Ashtanga Yoga, disciplina che incontro qui per la prima volta, integrando anatomia, pranayama, meditazione e filosofia. Nel 2024 torno in India per un corso intensivo di Ashtanga Yoga con Sachin Badoni. Insegno dal 2022 e nel 2024 apro a Sondrio il mio studio. A Maggio 2026 completo una nuova formazione frequentando l'Assisting Academy presso Ashtanga Yoga Italia, guidata da Rosa Tagliafierro. Nel mondo immenso della pratica yogica resto prima di tutto una studentessa: la pratica è parte della mia quotidianità e il mio intento è condividere i benefici e la bellezza dello yoga che mi accompagnano sin dai primi passi. Con amore e cura accompagno ogni persona nel proprio personale percorso.",
+      bio: "Mi chiamo Jennifer e il mio percorso nello yoga inizia nel 2012 con l'Hatha Yoga, diventando nel tempo una pratica quotidiana. Nel 2021 approfondisco lo studio con una formazione biennale in Hatha e Vinyasa Yoga presso Hari Om. Nel 2023 viaggio alla volta di Rishikesh, dove mi formo in Vinyasa e Ashtanga Yoga, disciplina che incontro qui per la prima volta, integrando anatomia, pranayama, meditazione e filosofia. Nel 2024 torno in India per un corso intensivo di Ashtanga Yoga con Sachin Badoni. Insegno dal 2022 e nel 2024 apro a Sondrio il mio studio. A maggio 2026 completo una nuova formazione frequentando l'Assisting Academy presso Ashtanga Yoga Italia, guidata da Rosa Tagliafierro. Nel mondo immenso della pratica yogica resto prima di tutto una studentessa: la pratica è parte della mia quotidianità e il mio intento è condividere i benefici e la bellezza dello yoga che mi accompagnano sin dai primi passi. Con amore e cura accompagno ogni persona nel proprio personale percorso.",
       philosophyHeading: "La Mia Filosofia",
       philosophy:
         "Lo yoga è un cammino: non si tratta solo di partecipare a una lezione, ma di creare uno spazio di presenza, ascolto e trasformazione nella propria vita.",
@@ -199,7 +199,8 @@ export const pricingGroups = [
       {
         id: "students",
         name: { it: "Studenti & Online", en: "Students & Online" },
-        price: "55€ / mese",
+        price: "55€",
+        unit: { it: "/ mese", en: "/ month" },
         details: {
           it: ["1 lezione a settimana", "Dedicato a studenti e pratica online"],
           en: ["1 class per week", "For students and online practice"],
@@ -217,7 +218,7 @@ export const pricingGroups = [
         price: "580€",
         originalPrice: "756€",
         deadline: {
-          it: "Offerta valida per iscrizioni entro il 30 Settembre.",
+          it: "Offerta valida per iscrizioni entro il 30 settembre.",
           en: "Offer valid for sign-ups by September 30.",
         },
         details: {
