@@ -10,8 +10,8 @@ export const translations = {
     hero: {
       tagline:
         "Creo spazi di pratica per coltivare presenza, ascolto e consapevolezza, respiro dopo respiro. Un cammino verso la propria libertà.",
-      ctaStoria: "LA MIA STORIA in pillole",
-      ctaApproccio: "CONOSCI IL MIO APPROCCIO",
+      ctaStoria: "La Mia Storia in Pillole",
+      ctaApproccio: "Conosci il Mio Approccio",
     },
     about: {
       heading: "La Mia Storia",
@@ -67,8 +67,8 @@ export const translations = {
     hero: {
       tagline:
         "I create spaces for practice to cultivate presence, listening, and awareness, breath after breath. A path toward your own freedom.",
-      ctaStoria: "MY STORY in a nutshell",
-      ctaApproccio: "DISCOVER MY APPROACH",
+      ctaStoria: "My Story in a Nutshell",
+      ctaApproccio: "Discover My Approach",
     },
     about: {
       heading: "My Story",

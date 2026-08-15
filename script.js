@@ -64,6 +64,30 @@ function initPricingExpanders(container) {
   });
 }
 
+function toggleReveal(targetId) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  const wasHidden = target.hidden;
+  target.hidden = !wasHidden;
+  document.querySelectorAll(`[data-reveal="${targetId}"]`).forEach((trigger) => {
+    trigger.setAttribute("aria-expanded", String(wasHidden));
+  });
+  if (wasHidden) {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+  }
+}
+
+function initRevealToggles() {
+  document.querySelectorAll("[data-reveal]").forEach((trigger) => {
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleReveal(trigger.getAttribute("data-reveal"));
+    });
+  });
+}
+
 function initLanguageToggle() {
   document.querySelectorAll(".lang-toggle button").forEach((btn) => {
     btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
@@ -93,6 +117,7 @@ function init() {
   const initialLang = savedLang === "en" ? "en" : "it";
   initLanguageToggle();
   initMobileNav();
+  initRevealToggles();
   applyLanguage(initialLang);
 }
 
