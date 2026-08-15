@@ -195,7 +195,7 @@ a {
   text-align: center;
   background-image: linear-gradient(rgba(30, 24, 16, 0.5), rgba(30, 24, 16, 0.5)), url("assets/hero-photo.jpg");
   background-size: cover;
-  background-position: center 70%;
+  background-position: center 45%;
   scroll-margin-top: 90px;
 }
 
