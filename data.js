@@ -20,7 +20,7 @@ export const translations = {
       approccioIntro:
         "Lo Yoga per me rappresenta un cammino di ascolto, presenza e trasformazione. Uno spazio in cui fermarsi, respirare e ritrovare una connessione più profonda con sé stessi.",
       approccioIntro2:
-        "Attraverso pratiche diverse accompagno ogni persona nel proprio percorso, rispettando il corpo, i suoi tempi e le sue possibilità. Offro lezioni di gruppo e private.",
+        "Attraverso pratiche diverse accompagno ogni persona nel proprio percorso, rispettando il corpo, i suoi tempi e le sue possibilità.",
       approccioTeachLabel: "Insegno:",
       approccioStyles: [
         "Hatha Yoga, per sviluppare stabilità, consapevolezza e armonia tra respiro e movimento",
@@ -30,6 +30,7 @@ export const translations = {
       ],
       approccioBreath:
         "Respiro e Meditazione sono parte integrante di ogni pratica, un invito a lasciare andare, sentire e ritornare in contatto con il proprio sé.",
+      approccioClasses: "Offro lezioni di gruppo e private.",
       approccioClosing:
         "Ogni lezione è un invito a rallentare, ascoltarsi e creare uno spazio di libertà interiore, un respiro alla volta.",
     },
@@ -95,7 +96,7 @@ export const translations = {
       approccioIntro:
         "For me, Yoga represents a path of listening, presence, and transformation. A space to pause, breathe, and reconnect more deeply with yourself.",
       approccioIntro2:
-        "Through different practices I accompany each person on their own path, respecting the body, its timing, and its possibilities. I offer both group and private classes.",
+        "Through different practices I accompany each person on their own path, respecting the body, its timing, and its possibilities.",
       approccioTeachLabel: "I teach:",
       approccioStyles: [
         "Hatha Yoga, to develop stability, awareness, and harmony between breath and movement",
@@ -105,6 +106,7 @@ export const translations = {
       ],
       approccioBreath:
         "Breath and Meditation are an integral part of every practice, an invitation to let go, to feel, and to reconnect with yourself.",
+      approccioClasses: "I offer both group and private classes.",
       approccioClosing:
         "Every class is an invitation to slow down, listen to yourself, and create a space of inner freedom, one breath at a time.",
     },
