@@ -77,14 +77,22 @@ a {
 }
 
 .logo {
-  font-family: Georgia, serif;
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
-  color: var(--color-text);
 }
 
-.logo span {
-  color: var(--color-accent-dark);
+.logo-mark {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo-wordmark {
+  height: 26px;
+  width: auto;
+  display: block;
 }
 
 .nav-toggle {
@@ -178,15 +186,24 @@ a {
 }
 
 .hero {
-  padding: 96px 0 72px;
-  background: radial-gradient(circle at top right, var(--color-highlight-bg), var(--color-bg) 60%);
+  padding: 140px 0 120px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  background-image: linear-gradient(rgba(30, 24, 16, 0.55), rgba(30, 24, 16, 0.55)), url("assets/hero-photo.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  scroll-margin-top: 90px;
 }
 
 .hero-inner h1 {
   max-width: 640px;
   margin: 0 auto 32px;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero-ctas {
@@ -196,8 +213,23 @@ a {
   flex-wrap: wrap;
 }
 
+.hero .button--secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.hero .button--secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 section {
   padding: 72px 0;
+  scroll-margin-top: 90px;
+}
+
+#storia,
+#approccio {
+  scroll-margin-top: 90px;
 }
 
 section h2 {
@@ -208,7 +240,7 @@ section h2 {
 
 .about p,
 .pricing > .container > p,
-.schedule p {
+.bookyway p {
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
@@ -295,6 +327,44 @@ section h2 {
   color: var(--color-highlight-text);
 }
 
+.pricing-card--expandable {
+  cursor: pointer;
+  position: relative;
+  padding-right: 40px;
+  transition: box-shadow 0.15s ease;
+}
+
+.pricing-card--expandable::after {
+  content: "+";
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  transition: transform 0.15s ease;
+}
+
+.pricing-card--expandable.expanded::after {
+  transform: rotate(45deg);
+}
+
+.pricing-card--expandable:hover {
+  box-shadow: 0 12px 28px rgba(51, 48, 42, 0.14);
+}
+
+.pricing-card--expandable:focus-visible {
+  outline: 2px solid var(--color-accent-dark);
+  outline-offset: 2px;
+}
+
+.pricing-card-more {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
 .pricing-perks {
   max-width: 640px;
   margin: 48px auto 0;
@@ -319,47 +389,37 @@ section h2 {
   color: var(--color-muted);
 }
 
-.schedule {
+.calendar {
+  padding: 0;
+  text-align: center;
+  background: var(--color-bg-alt);
+}
+
+.calendar h2 {
+  padding: 56px 24px 0;
+}
+
+.calendar-image {
+  display: block;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  margin: 32px auto 0;
+}
+
+.bookyway {
   background: var(--color-bg-alt);
   text-align: center;
 }
 
-.schedule-ctas {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin: 24px 0;
+.bookyway .button {
+  margin-top: 8px;
 }
 
-.schedule-note {
+.bookyway-note {
+  margin-top: 16px;
   font-size: 0.85rem;
   color: var(--color-muted);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.gallery-placeholder {
-  aspect-ratio: 1;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--color-accent), var(--color-highlight-bg));
-  position: relative;
-}
-
-.gallery-placeholder::after {
-  content: "✿";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact {
