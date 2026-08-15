@@ -68,7 +68,8 @@ export const translations = {
       body: "Hai domande? Scrivimi, sarò felice di risponderti.",
       whatsapp: "Scrivimi su WhatsApp",
       email: "Inviami una Email",
-      maps: "Vedi la Sede su Google Maps",
+      maps: "Trova lo Studio su Google Maps",
+      instagram: "Seguimi su Instagram",
     },
     footer: {
       location: "Sondrio, Italia",
@@ -144,7 +145,8 @@ export const translations = {
       body: "Have questions? Get in touch, I'd love to hear from you.",
       whatsapp: "Message on WhatsApp",
       email: "Send an Email",
-      maps: "View the Studio on Google Maps",
+      maps: "Find the Studio on Google Maps",
+      instagram: "Follow me on Instagram",
     },
     footer: {
       location: "Sondrio, Italy",
@@ -219,8 +221,8 @@ export const pricingGroups = [
         name: { it: "Percorso Introduzione allo Yoga", en: "Yoga Introduction Path" },
         price: "70€",
         details: {
-          it: ["6 lezioni", "Validità 1 mese", "<strong>Riservato ai nuovi allievi</strong>"],
-          en: ["6 classes", "Valid for 1 month", "<strong>New students only</strong>"],
+          it: ["Ingressi illimitati", "Validità 1 mese", "<strong>Riservato ai nuovi allievi</strong>"],
+          en: ["Unlimited entries", "Valid for 1 month", "<strong>New students only</strong>"],
         },
         description: {
           it: "Un primo passo per conoscere lo studio, l'insegnante e scoprire la pratica dello Yoga. Questo percorso ti permette di sperimentare diversi stili e trovare quello più adatto a te. Al termine del percorso potrai scegliere la soluzione più adatta alle tue esigenze.",

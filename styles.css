@@ -153,7 +153,9 @@ a {
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 12px 24px;
   border-radius: 999px;
   text-decoration: none;
@@ -497,6 +499,13 @@ section h2 {
   gap: 16px;
   flex-wrap: wrap;
   margin-top: 24px;
+}
+
+.contact-seal {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 48px auto 0;
 }
 
 .site-footer {
