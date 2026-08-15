@@ -5,7 +5,7 @@ export const translations = {
       calendar: "Calendario",
       pricing: "Pacchetti",
       bookyway: "Prenota",
-      gift: "Regalo",
+      gift: "Dono",
       contact: "Contatti",
     },
     hero: {
@@ -20,7 +20,7 @@ export const translations = {
       approccioIntro:
         "Lo Yoga per me rappresenta un cammino di ascolto, presenza e trasformazione. Uno spazio in cui fermarsi, respirare e ritrovare una connessione più profonda con sé stessi.",
       approccioIntro2:
-        "Attraverso pratiche diverse accompagno ogni persona nel proprio percorso, rispettando il corpo, i suoi tempi e le sue possibilità.",
+        "Attraverso pratiche diverse accompagno ogni persona nel proprio percorso, rispettando il corpo, i suoi tempi e le sue possibilità. Offro lezioni di gruppo e private.",
       approccioTeachLabel: "Insegno:",
       approccioStyles: [
         "Hatha Yoga, per sviluppare stabilità, consapevolezza e armonia tra respiro e movimento",
@@ -95,7 +95,7 @@ export const translations = {
       approccioIntro:
         "For me, Yoga represents a path of listening, presence, and transformation. A space to pause, breathe, and reconnect more deeply with yourself.",
       approccioIntro2:
-        "Through different practices I accompany each person on their own path, respecting the body, its timing, and its possibilities.",
+        "Through different practices I accompany each person on their own path, respecting the body, its timing, and its possibilities. I offer both group and private classes.",
       approccioTeachLabel: "I teach:",
       approccioStyles: [
         "Hatha Yoga, to develop stability, awareness, and harmony between breath and movement",
@@ -217,8 +217,8 @@ export const pricingGroups = [
         name: { it: "Percorso Introduzione allo Yoga", en: "Yoga Introduction Path" },
         price: "70€",
         details: {
-          it: ["6 lezioni", "Validità 1 mese", "Riservato ai nuovi allievi"],
-          en: ["6 classes", "Valid for 1 month", "New students only"],
+          it: ["6 lezioni", "Validità 1 mese", "<strong>Riservato ai nuovi allievi</strong>"],
+          en: ["6 classes", "Valid for 1 month", "<strong>New students only</strong>"],
         },
         description: {
           it: "Un primo passo per conoscere lo studio, l'insegnante e scoprire la pratica dello Yoga. Questo percorso ti permette di sperimentare diversi stili e trovare quello più adatto a te. Al termine del percorso potrai scegliere la soluzione più adatta alle tue esigenze.",
