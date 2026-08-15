@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jennifer Ainoldi Yoga — Sondrio</title>
+  <meta name="description" content="Lezioni di yoga a Sondrio con Jennifer Ainoldi. Hatha, Vinyasa e Ashtanga Yoga in presenza e online." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#hero">Jennifer Ainoldi <span>Yoga</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu">
+        <a href="#about" data-i18n="nav.about">Chi Sono</a>
+        <a href="#pricing" data-i18n="nav.pricing">Prezzi</a>
+        <a href="#schedule" data-i18n="nav.schedule">Calendario</a>
+        <a href="#gallery" data-i18n="nav.gallery">Galleria</a>
+        <a href="#contact" data-i18n="nav.contact">Contatti</a>
+        <div class="lang-toggle">
+          <button data-lang="it" type="button">IT</button>
+          <button data-lang="en" type="button">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <h1 data-i18n="hero.tagline">Creo spazi di pratica per coltivare presenza, ascolto e consapevolezza, respiro dopo respiro. Un cammino verso la propria libertà.</h1>
+        <div class="hero-ctas">
+          <a class="button button--primary" href="https://admin.bookyway.com/v2/account/login" target="_blank" rel="noopener" data-i18n="hero.ctaBook">Prenota una lezione</a>
+          <a class="button button--secondary" href="https://admin.bookyway.com/v2/account/login" target="_blank" rel="noopener" data-i18n="hero.ctaCalendar">Vedi il calendario</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 data-i18n="about.heading">La Mia Storia</h2>
+        <p data-i18n="about.bio">Bio in caricamento…</p>
+        <h3 data-i18n="about.philosophyHeading">La Mia Filosofia</h3>
+        <p class="philosophy" data-i18n="about.philosophy">Filosofia in caricamento…</p>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2 data-i18n="pricing.heading">Abbonamenti & Costi</h2>
+        <p data-i18n="pricing.intro">Trova il percorso più adatto a te.</p>
+        <div id="pricing-groups"></div>
+        <div class="pricing-perks">
+          <h3 data-i18n="pricing.perksHeading">I Tuoi Vantaggi</h3>
+          <ul data-i18n-list="pricing.perks"></ul>
+        </div>
+        <p class="pricing-signup">
+          <span data-i18n="pricing.signupNote">Per iscriverti, compila il modulo:</span>
+          <a href="https://forms.gle/MRuU7H5H3K93dkGL6" target="_blank" rel="noopener" class="button button--primary" data-i18n="pricing.signupCta">Iscriviti Ora</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+      <div class="container">
+        <h2 data-i18n="schedule.heading">Calendario & Prenotazioni</h2>
+        <p data-i18n="schedule.body">Consulta gli orari disponibili e prenota il tuo posto direttamente su Bookyway.</p>
+        <div class="schedule-ctas">
+          <a class="button button--primary" href="https://admin.bookyway.com/v2/account/login" target="_blank" rel="noopener" data-i18n="schedule.ctaBook">Prenota una Lezione</a>
+          <a class="button button--secondary" href="https://admin.bookyway.com/v2/account/login" target="_blank" rel="noopener" data-i18n="schedule.ctaCalendar">Vedi il Calendario</a>
+        </div>
+        <p class="schedule-note" data-i18n="schedule.note">Effettua il login (o registrati) su Bookyway per vedere gli orari disponibili e prenotare.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 data-i18n="gallery.heading">Galleria</h2>
+        <div class="gallery-grid">
+          <div class="gallery-placeholder"></div>
+          <div class="gallery-placeholder"></div>
+          <div class="gallery-placeholder"></div>
+          <div class="gallery-placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 data-i18n="contact.heading">Contatti</h2>
+        <p data-i18n="contact.body">Hai domande? Scrivimi, sarò felice di risponderti.</p>
+        <div class="contact-links">
+          <a class="button button--primary" href="https://api.whatsapp.com/send?phone=393420198207" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Scrivimi su WhatsApp</a>
+          <a class="button button--secondary" href="mailto:jenniferainoldi@gmail.com" data-i18n="contact.email">Inviami una Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.location">Sondrio, Italia</p>
+      <p data-i18n="footer.rights">Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
