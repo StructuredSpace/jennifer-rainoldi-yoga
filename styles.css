@@ -8,6 +8,7 @@
   --color-accent-dark: #5f6d45;
   --color-highlight: #c97b4a;
   --color-highlight-bg: #fbeee3;
+  --color-highlight-text: #9c5730;
   --color-border: #e7e0d5;
   --radius: 14px;
   --shadow: 0 8px 24px rgba(51, 48, 42, 0.08);
@@ -20,6 +21,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -132,7 +139,7 @@ a {
 }
 
 .lang-toggle button.active {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   color: #fff;
 }
 
@@ -147,7 +154,7 @@ a {
 }
 
 .button--primary {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   color: #fff;
 }
 
@@ -160,6 +167,14 @@ a {
 .button:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow);
+}
+
+.button:focus-visible,
+.nav-menu a:focus-visible,
+.lang-toggle button:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--color-accent-dark);
+  outline-offset: 2px;
 }
 
 .hero {
@@ -248,7 +263,7 @@ section h2 {
 }
 
 .pricing-card--highlight .pricing-card-price {
-  color: var(--color-highlight);
+  color: var(--color-highlight-text);
 }
 
 .pricing-card-original {
@@ -277,7 +292,7 @@ section h2 {
   margin-top: 12px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-highlight);
+  color: var(--color-highlight-text);
 }
 
 .pricing-perks {
