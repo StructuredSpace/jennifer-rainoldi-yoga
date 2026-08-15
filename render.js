@@ -22,7 +22,11 @@ export function renderPricingCardHTML(plan, lang) {
   const more = plan.description
     ? `<p class="pricing-card-more" hidden>${plan.description[lang]}</p>`
     : "";
+  const badge = plan.badge
+    ? `<span class="pricing-card-badge">${plan.badge[lang]}</span>`
+    : "";
   return `<div class="pricing-card${highlightClass}${expandableClass}"${interactiveAttrs}>
+    ${badge}
     <h4 class="pricing-card-name">${name}</h4>
     <p class="pricing-card-price">${original}<span class="pricing-card-price-amount">${plan.price}</span>${unit}</p>
     <ul class="pricing-card-details">${details}</ul>

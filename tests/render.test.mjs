@@ -122,6 +122,30 @@ test("renderPricingCardHTML omits the description block and interactive attribut
   assert.doesNotMatch(html, /role="button"/);
 });
 
+test("renderPricingCardHTML renders the badge text in the requested language when present", () => {
+  const plan = {
+    id: "sample",
+    name: { it: "X", en: "X" },
+    price: "1€",
+    badge: { it: "Offerta Limitata", en: "Limited Offer" },
+    details: { it: [], en: [] },
+  };
+  const htmlEn = renderPricingCardHTML(plan, "en");
+  assert.match(htmlEn, /Limited Offer/);
+  assert.doesNotMatch(htmlEn, /Offerta Limitata/);
+});
+
+test("renderPricingCardHTML omits the badge entirely when not present", () => {
+  const plan = {
+    id: "sample",
+    name: { it: "X", en: "X" },
+    price: "1€",
+    details: { it: [], en: [] },
+  };
+  const html = renderPricingCardHTML(plan, "en");
+  assert.doesNotMatch(html, /pricing-card-badge/);
+});
+
 test("renderAllPricingHTML renders every group from the real pricing data", () => {
   const html = renderAllPricingHTML(pricingGroups, "it");
   for (const group of pricingGroups) {

@@ -203,8 +203,10 @@ a {
   max-width: 640px;
   margin: 0 auto 32px;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 400;
   color: #fff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  white-space: pre-line;
 }
 
 .hero-ctas {
@@ -302,6 +304,18 @@ section h2 {
 .pricing-card--highlight {
   background: var(--color-highlight-bg);
   border: 2px solid var(--color-highlight);
+}
+
+.pricing-card-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--color-highlight);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .pricing-card-name {

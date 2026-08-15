@@ -9,14 +9,13 @@ export const translations = {
     },
     hero: {
       tagline:
-        "Creo spazi di pratica per coltivare presenza, ascolto e consapevolezza, respiro dopo respiro. Un cammino verso la propria libertà.",
+        "Creo spazi di pratica\nper coltivare\npresenza, ascolto e consapevolezza,\nrespiro dopo respiro.\nUn cammino verso la propria libertà.",
       ctaStoria: "La Mia Storia in Pillole",
       ctaApproccio: "Conosci il Mio Approccio",
     },
     about: {
       heading: "La Mia Storia",
       bio: "Mi chiamo Jennifer e il mio percorso nello yoga inizia nel 2012 con l'Hatha Yoga, diventando nel tempo una pratica quotidiana. Nel 2021 approfondisco lo studio con una formazione biennale in Hatha e Vinyasa Yoga presso Hari Om. Nel 2023 viaggio alla volta di Rishikesh, dove mi formo in Vinyasa e Ashtanga Yoga, disciplina che incontro qui per la prima volta, integrando anatomia, pranayama, meditazione e filosofia. Nel 2024 torno in India per un corso intensivo di Ashtanga Yoga con Sachin Badoni. Insegno dal 2022 e nel 2024 apro a Sondrio il mio studio. A maggio 2026 completo una nuova formazione frequentando l'Assisting Academy presso Ashtanga Yoga Italia, guidata da Rosa Tagliafierro. Nel mondo immenso della pratica yogica resto prima di tutto una studentessa: la pratica è parte della mia quotidianità e il mio intento è condividere i benefici e la bellezza dello yoga che mi accompagnano sin dai primi passi. Con amore e cura accompagno ogni persona nel proprio personale percorso.",
-      philosophyHeading: "Il Mio Approccio",
       approccioIntro:
         "Lo Yoga per me rappresenta un cammino di ascolto, presenza e trasformazione. Uno spazio in cui fermarsi, respirare e ritrovare una connessione più profonda con sé stessi.",
       approccioIntro2:
@@ -84,14 +83,13 @@ export const translations = {
     },
     hero: {
       tagline:
-        "I create spaces for practice to cultivate presence, listening, and awareness, breath after breath. A path toward your own freedom.",
+        "I create spaces for practice\nto cultivate\npresence, listening, and awareness,\nbreath after breath.\nA path toward your own freedom.",
       ctaStoria: "My Story in a Nutshell",
       ctaApproccio: "Discover My Approach",
     },
     about: {
       heading: "My Story",
       bio: "My name is Jennifer, and my yoga journey began in 2012 with Hatha Yoga, which over time became a daily practice. In 2021 I deepened my studies with a two-year training in Hatha and Vinyasa Yoga at Hari Om. In 2023 I traveled to Rishikesh, where I trained in Vinyasa and Ashtanga Yoga — a discipline I discovered there for the first time — integrating anatomy, pranayama, meditation, and philosophy. In 2024 I returned to India for an intensive Ashtanga Yoga course with Sachin Badoni. I have been teaching since 2022, and in 2024 I opened my own studio in Sondrio. In May 2026 I completed further training at the Assisting Academy of Ashtanga Yoga Italia, led by Rosa Tagliafierro. In the vast world of yoga practice, I remain first and foremost a student: practice is part of my daily life, and my intention is to share the benefits and beauty of yoga that have accompanied me since my first steps. With love and care, I accompany each person on their own personal journey.",
-      philosophyHeading: "My Approach",
       approccioIntro:
         "For me, Yoga represents a path of listening, presence, and transformation. A space to pause, breathe, and reconnect more deeply with yourself.",
       approccioIntro2:
@@ -152,6 +150,44 @@ export const translations = {
 };
 
 export const pricingGroups = [
+  {
+    id: "semester",
+    title: { it: "Abbonamento Semestrale", en: "Semester Subscription" },
+    plans: [
+      {
+        id: "semester",
+        name: { it: "Percorso di Trasformazione", en: "Transformation Path" },
+        badge: { it: "⏳ Offerta a Tempo Limitato", en: "⏳ Limited-Time Offer" },
+        price: "580€",
+        originalPrice: "756€",
+        deadline: {
+          it: "Offerta valida per iscrizioni entro il 30 settembre.",
+          en: "Offer valid for sign-ups by September 30.",
+        },
+        details: {
+          it: [
+            "Pratica illimitata per 6 mesi",
+            "Risparmi 176€ rispetto al valore pieno",
+            "10% di sconto sui workshop",
+            "Tote bag in omaggio",
+            "Lezione online inclusa",
+          ],
+          en: [
+            "Unlimited practice for 6 months",
+            "Save 176€ off full value",
+            "10% off workshops",
+            "Free tote bag",
+            "Online class included",
+          ],
+        },
+        description: {
+          it: "Se senti il desiderio di dedicarti allo yoga con continuità, questo è il momento giusto per iniziare un percorso di 6 mesi che ti accompagnerà in un viaggio più profondo verso equilibrio, consapevolezza e crescita personale. Un periodo abbastanza lungo per creare continuità, approfondire la pratica e trasformare lo yoga in un'abitudine.",
+          en: "If you feel ready to commit to yoga with continuity, this is the right moment to begin a 6-month path that will guide you on a deeper journey toward balance, awareness, and personal growth. A period long enough to build consistency, deepen your practice, and turn yoga into a habit.",
+        },
+        highlight: true,
+      },
+    ],
+  },
   {
     id: "start",
     title: { it: "Come Iniziare", en: "Getting Started" },
@@ -263,43 +299,6 @@ export const pricingGroups = [
           it: ["1 lezione a settimana", "Dedicato a studenti e pratica online"],
           en: ["1 class per week", "For students and online practice"],
         },
-      },
-    ],
-  },
-  {
-    id: "semester",
-    title: { it: "Abbonamento Semestrale", en: "Semester Subscription" },
-    plans: [
-      {
-        id: "semester",
-        name: { it: "Percorso di Trasformazione", en: "Transformation Path" },
-        price: "580€",
-        originalPrice: "756€",
-        deadline: {
-          it: "Offerta valida per iscrizioni entro il 30 settembre.",
-          en: "Offer valid for sign-ups by September 30.",
-        },
-        details: {
-          it: [
-            "Pratica illimitata per 6 mesi",
-            "Risparmi 176€ rispetto al valore pieno",
-            "10% di sconto sui workshop",
-            "Tote bag in omaggio",
-            "Lezione online inclusa",
-          ],
-          en: [
-            "Unlimited practice for 6 months",
-            "Save 176€ off full value",
-            "10% off workshops",
-            "Free tote bag",
-            "Online class included",
-          ],
-        },
-        description: {
-          it: "Se senti il desiderio di dedicarti allo yoga con continuità, questo è il momento giusto per iniziare un percorso di 6 mesi che ti accompagnerà in un viaggio più profondo verso equilibrio, consapevolezza e crescita personale. Un periodo abbastanza lungo per creare continuità, approfondire la pratica e trasformare lo yoga in un'abitudine.",
-          en: "If you feel ready to commit to yoga with continuity, this is the right moment to begin a 6-month path that will guide you on a deeper journey toward balance, awareness, and personal growth. A period long enough to build consistency, deepen your practice, and turn yoga into a habit.",
-        },
-        highlight: true,
       },
     ],
   },
