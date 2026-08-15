@@ -85,13 +85,13 @@ a {
 }
 
 .logo-mark {
-  height: 40px;
+  height: 46px;
   width: auto;
   display: block;
 }
 
 .logo-wordmark {
-  height: 26px;
+  height: 36px;
   width: auto;
   display: block;
 }
@@ -257,6 +257,23 @@ section h2 {
   color: var(--color-accent-dark);
 }
 
+.approccio-teach-label {
+  font-weight: 700;
+  text-align: center;
+}
+
+.approccio-styles {
+  max-width: 680px;
+  margin: 0 auto 1em;
+  padding-left: 20px;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.approccio-styles li {
+  margin-bottom: 8px;
+}
+
 .pricing-group {
   margin: 40px 0;
 }
@@ -304,7 +321,7 @@ section h2 {
 }
 
 .pricing-card-original {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--color-muted);
   text-decoration: line-through;
   margin-right: 8px;
@@ -397,7 +414,7 @@ section h2 {
 .calendar {
   padding: 0;
   text-align: center;
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
 }
 
 .calendar h2 {
@@ -425,6 +442,35 @@ section h2 {
   margin-top: 16px;
   font-size: 0.85rem;
   color: var(--color-muted);
+}
+
+.gift {
+  text-align: center;
+}
+
+.gift p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  margin: 24px auto 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .contact {
