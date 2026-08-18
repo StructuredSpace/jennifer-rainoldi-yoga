@@ -428,9 +428,13 @@ section h2 {
 }
 
 .calendar {
-  padding: 0;
+  padding: 0 0 56px;
   text-align: center;
   background: var(--color-bg);
+}
+
+.calendar-download {
+  margin-top: 32px;
 }
 
 .calendar h2 {
