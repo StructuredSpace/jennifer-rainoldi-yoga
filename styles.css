@@ -547,3 +547,10 @@ section h2 {
     display: flex;
   }
 }
+
+@media (max-width: 480px) {
+  .calendar-download {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

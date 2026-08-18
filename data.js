@@ -52,7 +52,7 @@ export const translations = {
     calendar: {
       heading: "Calendario Lezioni",
       imageAlt: "Orario settimanale delle lezioni di yoga",
-      download: "Scarica il Calendario (PNG)",
+      download: "Scarica il Calendario",
     },
     bookyway: {
       heading: "Prenota su Bookyway",
@@ -130,7 +130,7 @@ export const translations = {
     calendar: {
       heading: "Class Schedule",
       imageAlt: "Weekly yoga class schedule",
-      download: "Download the Schedule (PNG)",
+      download: "Download the Schedule",
     },
     bookyway: {
       heading: "Book on Bookyway",
