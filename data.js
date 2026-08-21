@@ -275,10 +275,10 @@ export const pricingGroups = [
       {
         id: "flex",
         name: { it: "Flex", en: "Flex" },
-        price: "162€",
+        price: "182€",
         details: {
-          it: ["12 ingressi", "2 volte a settimana"],
-          en: ["12 entries", "2x per week"],
+          it: ["16 ingressi", "2 volte a settimana"],
+          en: ["16 entries", "2x per week"],
         },
         description: {
           it: "<strong>La scelta migliore per trasformare la pratica in un'abitudine.</strong>",
