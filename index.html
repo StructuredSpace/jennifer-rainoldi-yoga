@@ -84,7 +84,7 @@
       <div class="container">
         <h2 data-i18n="regolamento.heading">Regolamento</h2>
         <p class="regolamento-intro" data-i18n="regolamento.intro">Stagione 2026</p>
-        <p class="regolamento-toggle-wrap">
+        <p class="section-toggle-wrap">
           <button type="button" class="button button--secondary" data-reveal="regolamento-content" data-i18n="regolamento.cta">Leggi il Regolamento</button>
         </p>
         <div id="regolamento-content" hidden>
@@ -100,7 +100,12 @@
     <section id="faq" class="faq-section">
       <div class="container">
         <h2 data-i18n="faq.heading">Domande Frequenti</h2>
-        <div id="faq-groups"></div>
+        <p class="section-toggle-wrap">
+          <button type="button" class="button button--secondary" data-reveal="faq-content" data-i18n="faq.cta">Mostra le Domande Frequenti</button>
+        </p>
+        <div id="faq-content" hidden>
+          <div id="faq-groups"></div>
+        </div>
       </div>
     </section>
 

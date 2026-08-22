@@ -61,6 +61,7 @@ export const translations = {
     },
     faq: {
       heading: "Domande Frequenti",
+      cta: "Mostra le Domande Frequenti",
     },
     bookyway: {
       heading: "Prenota su Bookyway",
@@ -147,6 +148,7 @@ export const translations = {
     },
     faq: {
       heading: "Frequently Asked Questions",
+      cta: "Show the FAQ",
     },
     bookyway: {
       heading: "Book on Bookyway",
@@ -275,8 +277,8 @@ export const pricingGroups = [
     id: "autumn",
     title: { it: "Abbonamenti Ciclo Autunnale", en: "Autumn Cycle Subscriptions" },
     note: {
-      it: "Validità: dal 21 settembre al 28 novembre 2026. Gli abbonamenti coprono esclusivamente questo periodo.",
-      en: "Valid: from September 21 to November 28, 2026. Subscriptions cover only this period.",
+      it: "Validità: dal 21 settembre al 28 novembre 2026.",
+      en: "Valid: from September 21 to November 28, 2026.",
     },
     plans: [
       {
