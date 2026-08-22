@@ -84,7 +84,12 @@
       <div class="container">
         <h2 data-i18n="regolamento.heading">Regolamento</h2>
         <p class="regolamento-intro" data-i18n="regolamento.intro">Stagione 2026</p>
-        <div id="regolamento-groups"></div>
+        <p class="regolamento-toggle-wrap">
+          <button type="button" class="button button--secondary" data-reveal="regolamento-content" data-i18n="regolamento.cta">Leggi il Regolamento</button>
+        </p>
+        <div id="regolamento-content" hidden>
+          <div id="regolamento-groups"></div>
+        </div>
         <p class="pricing-signup">
           <span data-i18n="pricing.signupNote">Per iscriverti, compila il modulo:</span>
           <a href="https://forms.gle/MRuU7H5H3K93dkGL6" target="_blank" rel="noopener" class="button button--primary" data-i18n="pricing.signupCta">Iscriviti Ora</a>

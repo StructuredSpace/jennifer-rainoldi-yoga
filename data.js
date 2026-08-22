@@ -57,6 +57,7 @@ export const translations = {
     regolamento: {
       heading: "Regolamento",
       intro: "Stagione 2026",
+      cta: "Leggi il Regolamento",
     },
     faq: {
       heading: "Domande Frequenti",
@@ -142,6 +143,7 @@ export const translations = {
     regolamento: {
       heading: "Studio Rules",
       intro: "2026 Season",
+      cta: "Read the Studio Rules",
     },
     faq: {
       heading: "Frequently Asked Questions",

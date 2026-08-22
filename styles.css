@@ -475,6 +475,11 @@ section h2 {
   margin-top: -0.6em;
 }
 
+.regolamento-toggle-wrap {
+  text-align: center;
+  margin: 1.4em 0;
+}
+
 .regolamento-group {
   max-width: 720px;
   margin: 0 auto 2.4em;
