@@ -38,12 +38,53 @@ export function renderPricingCardHTML(plan, lang) {
 export function renderPricingGroupHTML(group, lang) {
   const title = group.title[lang];
   const cards = group.plans.map((plan) => renderPricingCardHTML(plan, lang)).join("");
+  const note = group.note
+    ? `<p class="pricing-group-note">${group.note[lang]}</p>`
+    : "";
   return `<div class="pricing-group" id="group-${group.id}">
     <h3 class="pricing-group-title">${title}</h3>
+    ${note}
     <div class="pricing-cards">${cards}</div>
   </div>`;
 }
 
 export function renderAllPricingHTML(groups, lang) {
   return groups.map((group) => renderPricingGroupHTML(group, lang)).join("");
+}
+
+export function renderRegolamentoGroupHTML(group, lang) {
+  const heading = group.heading[lang];
+  const items = group.items[lang].map((item) => `<li>${item}</li>`).join("");
+  const note = group.note
+    ? `<p class="regolamento-note">${group.note[lang]}</p>`
+    : "";
+  return `<div class="regolamento-group">
+    <h3 class="regolamento-group-title">${heading}</h3>
+    <ul class="regolamento-list">${items}</ul>
+    ${note}
+  </div>`;
+}
+
+export function renderAllRegolamentoHTML(groups, lang) {
+  return groups.map((group) => renderRegolamentoGroupHTML(group, lang)).join("");
+}
+
+export function renderFaqItemHTML(item, lang) {
+  return `<details class="faq">
+    <summary><span class="faq-question">${item.q[lang]}</span><span class="faq-icon">+</span></summary>
+    <div class="faq-answer">${item.a[lang]}</div>
+  </details>`;
+}
+
+export function renderFaqGroupHTML(group, lang) {
+  const heading = group.heading[lang];
+  const items = group.items.map((item) => renderFaqItemHTML(item, lang)).join("");
+  return `<div class="faq-group">
+    <h3 class="faq-group-title">${heading}</h3>
+    <div class="faq-list">${items}</div>
+  </div>`;
+}
+
+export function renderAllFaqHTML(groups, lang) {
+  return groups.map((group) => renderFaqGroupHTML(group, lang)).join("");
 }

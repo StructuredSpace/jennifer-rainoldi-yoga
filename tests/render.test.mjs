@@ -1,7 +1,17 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { getNested, renderPricingCardHTML, renderAllPricingHTML } from "../render.js";
-import { pricingGroups } from "../data.js";
+import {
+  getNested,
+  renderPricingCardHTML,
+  renderPricingGroupHTML,
+  renderAllPricingHTML,
+  renderRegolamentoGroupHTML,
+  renderAllRegolamentoHTML,
+  renderFaqItemHTML,
+  renderFaqGroupHTML,
+  renderAllFaqHTML,
+} from "../render.js";
+import { pricingGroups, regolamentoGroups, faqGroups } from "../data.js";
 
 test("getNested reads a dotted path from a nested object", () => {
   const obj = { a: { b: { c: "value" } } };
@@ -152,3 +162,91 @@ test("renderAllPricingHTML renders every group from the real pricing data", () =
     assert.match(html, new RegExp(group.title.it));
   }
 });
+
+test("renderPricingGroupHTML renders the group note in the requested language when present", () => {
+  const group = {
+    id: "sample",
+    title: { it: "Gruppo", en: "Group" },
+    note: { it: "Nota italiana", en: "English note" },
+    plans: [],
+  };
+  const htmlEn = renderPricingGroupHTML(group, "en");
+  assert.match(htmlEn, /pricing-group-note/);
+  assert.match(htmlEn, /English note/);
+  assert.doesNotMatch(htmlEn, /Nota italiana/);
+});
+
+test("renderPricingGroupHTML omits the note entirely when not present", () => {
+  const group = { id: "sample", title: { it: "Gruppo", en: "Group" }, plans: [] };
+  const html = renderPricingGroupHTML(group, "en");
+  assert.doesNotMatch(html, /pricing-group-note/);
+});
+
+test("renderRegolamentoGroupHTML renders the heading, items, and optional note in the requested language", () => {
+  const group = {
+    id: "sample",
+    heading: { it: "Titolo", en: "Heading" },
+    items: { it: ["voce uno"], en: ["item one"] },
+    note: { it: "nota", en: "note" },
+  };
+  const htmlEn = renderRegolamentoGroupHTML(group, "en");
+  assert.match(htmlEn, /Heading/);
+  assert.match(htmlEn, /item one/);
+  assert.match(htmlEn, /class="regolamento-note">note</);
+  assert.doesNotMatch(htmlEn, /Titolo|voce uno|>nota</);
+});
+
+test("renderRegolamentoGroupHTML omits the note entirely when not present", () => {
+  const group = { id: "sample", heading: { it: "T", en: "H" }, items: { it: ["a"], en: ["a"] } };
+  const html = renderRegolamentoGroupHTML(group, "en");
+  assert.doesNotMatch(html, /regolamento-note/);
+});
+
+test("renderAllRegolamentoHTML renders every group from the real regolamento data", () => {
+  const html = renderAllRegolamentoHTML(regolamentoGroups, "it");
+  for (const group of regolamentoGroups) {
+    assert.match(html, new RegExp(group.heading.it));
+  }
+});
+
+test("renderFaqItemHTML renders the question and answer in the requested language as a native details/summary", () => {
+  const item = {
+    q: { it: "Domanda?", en: "Question?" },
+    a: { it: "Risposta.", en: "Answer." },
+  };
+  const htmlEn = renderFaqItemHTML(item, "en");
+  assert.match(htmlEn, /<details class="faq">/);
+  assert.match(htmlEn, /Question\?/);
+  assert.match(htmlEn, /Answer\./);
+  assert.doesNotMatch(htmlEn, /Domanda\?|Risposta\./);
+});
+
+test("renderFaqGroupHTML renders the group heading and every item", () => {
+  const group = {
+    id: "sample",
+    heading: { it: "Gruppo", en: "Group" },
+    items: [
+      { q: { it: "D1", en: "Q1" }, a: { it: "R1", en: "A1" } },
+      { q: { it: "D2", en: "Q2" }, a: { it: "R2", en: "A2" } },
+    ],
+  };
+  const html = renderFaqGroupHTML(group, "en");
+  assert.match(html, /Group/);
+  assert.match(html, /Q1/);
+  assert.match(html, /Q2/);
+  assert.equal((html.match(/<details class="faq">/g) || []).length, 2);
+});
+
+test("renderAllFaqHTML renders every group and every question from the real FAQ data", () => {
+  const html = renderAllFaqHTML(faqGroups, "it");
+  for (const group of faqGroups) {
+    assert.match(html, new RegExp(group.heading.it));
+    for (const item of group.items) {
+      assert.match(html, new RegExp(escapeRegExp(item.q.it)));
+    }
+  }
+});
+
+function escapeRegExp(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}

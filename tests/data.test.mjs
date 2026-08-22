@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { translations, pricingGroups } from "../data.js";
+import { translations, pricingGroups, regolamentoGroups, faqGroups } from "../data.js";
 
 function collectKeys(obj, prefix = "") {
   return Object.entries(obj).flatMap(([key, value]) => {
@@ -49,6 +49,42 @@ test("every plan description (if present) is defined in both languages", () => {
         assert.ok(plan.description.it, `plan ${plan.id} missing italian description`);
         assert.ok(plan.description.en, `plan ${plan.id} missing english description`);
       }
+    }
+  }
+});
+
+test("every pricing group note (if present) is defined in both languages", () => {
+  for (const group of pricingGroups) {
+    if (group.note) {
+      assert.ok(group.note.it, `group ${group.id} missing italian note`);
+      assert.ok(group.note.en, `group ${group.id} missing english note`);
+    }
+  }
+});
+
+test("every regolamento group has a heading and matching item counts in both languages", () => {
+  for (const group of regolamentoGroups) {
+    assert.ok(group.heading.it && group.heading.en, `group ${group.id} missing heading`);
+    assert.equal(
+      group.items.it.length,
+      group.items.en.length,
+      `group ${group.id} has mismatched item counts between languages`
+    );
+    assert.ok(group.items.it.length > 0, `group ${group.id} has no items`);
+    if (group.note) {
+      assert.ok(group.note.it, `group ${group.id} missing italian note`);
+      assert.ok(group.note.en, `group ${group.id} missing english note`);
+    }
+  }
+});
+
+test("every FAQ group has a heading and every item has a question and answer in both languages", () => {
+  for (const group of faqGroups) {
+    assert.ok(group.heading.it && group.heading.en, `group ${group.id} missing heading`);
+    assert.ok(group.items.length > 0, `group ${group.id} has no items`);
+    for (const item of group.items) {
+      assert.ok(item.q.it && item.q.en, `an item in group ${group.id} is missing a question`);
+      assert.ok(item.a.it && item.a.en, `an item in group ${group.id} is missing an answer`);
     }
   }
 });

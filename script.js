@@ -1,5 +1,5 @@
-import { translations, pricingGroups } from "./data.js";
-import { getNested, renderAllPricingHTML } from "./render.js";
+import { translations, pricingGroups, regolamentoGroups, faqGroups } from "./data.js";
+import { getNested, renderAllPricingHTML, renderAllRegolamentoHTML, renderAllFaqHTML } from "./render.js";
 
 const STORAGE_KEY = "jay-lang";
 
@@ -42,6 +42,16 @@ function applyLanguage(lang) {
   if (pricingContainer) {
     pricingContainer.innerHTML = renderAllPricingHTML(pricingGroups, lang);
     initPricingExpanders(pricingContainer);
+  }
+
+  const regolamentoContainer = document.getElementById("regolamento-groups");
+  if (regolamentoContainer) {
+    regolamentoContainer.innerHTML = renderAllRegolamentoHTML(regolamentoGroups, lang);
+  }
+
+  const faqContainer = document.getElementById("faq-groups");
+  if (faqContainer) {
+    faqContainer.innerHTML = renderAllFaqHTML(faqGroups, lang);
   }
 
   document.querySelectorAll(".lang-toggle button").forEach((btn) => {
