@@ -1,7 +1,6 @@
 export const translations = {
   it: {
     nav: {
-      about: "Chi Sono",
       calendar: "Calendario",
       pricing: "Pacchetti",
       bookyway: "Prenota",
@@ -88,7 +87,6 @@ export const translations = {
   },
   en: {
     nav: {
-      about: "About",
       calendar: "Schedule",
       pricing: "Packages",
       bookyway: "Book",
